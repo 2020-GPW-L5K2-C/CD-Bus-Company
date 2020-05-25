@@ -61,10 +61,14 @@ $dbname="l5k2c";
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Home page</span></a>
+          <span>Homepage</span></a>
       </li>
 
       <!-- Divider -->
@@ -77,85 +81,52 @@ $dbname="l5k2c";
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Addons
+   <div class="sidebar-heading">
+        Main
       </div>
         
-         <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="back-end.php">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Back-end</span></a>
+        <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tables</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            
+            <h6 class="collapse-header">Front-end:</h6>
+            <a class="collapse-item" href="forder.php">Order</a>
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Back-end:</h6>
+            <a class="collapse-item" href="back-end.php">Order</a>
+            <a class="collapse-item" href="customer.php">Customer</a>
+            <a class="collapse-item" href="staff.php">Staff</a>
+            <a class="collapse-item" href="ticket.php">Ticket</a>
+            <a class="collapse-item" href="meal.php">Meal</a>
+            <a class="collapse-item" href="price.php">Price</a>
+            <a class="collapse-item" href="bus.php">Bus</a>
+            
+          </div>
+        </div>
       </li>
-        
-        <!-- Nav Item - Charts -->
+
+         <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="charts.php">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
       </li>
         
- <!-- Nav Item - Tables -->
+        <div class="sidebar-heading">
+        Extra
+      </div>
+        
+         <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="customer.php">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Customer</span></a>
+        <a class="nav-link" href="login.php">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Login</span></a>
       </li>
         
-        <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="staff.php">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Staff</span></a>
-      </li>
-        
-        
-        <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="route.php">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Route</span></a>
-      </li>
-        
-        <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="ticket.php">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Ticket</span></a>
-      </li>
-        
-        <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="meal.php">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Meal</span></a>
-      </li>
-        
-        <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="bus.php">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Bus</span></a>
-      </li>
-        
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Login</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.php">Login</a>
-            
-          </div>
-        </div>
-      </li>
-
       
 
      

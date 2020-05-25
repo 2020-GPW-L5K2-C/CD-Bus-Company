@@ -62,7 +62,7 @@ $dbname="l5k2c";
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-     <li class="nav-item active">
+      <li class="nav-item active">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Homepage</span></a>
@@ -124,9 +124,11 @@ $dbname="l5k2c";
           <span>Login</span></a>
       </li>
         
+      <hr class="sidebar-divider d-none d-md-block">
 
-      
-
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
 
     </ul>
     <!-- End of Sidebar -->
@@ -324,12 +326,12 @@ $dbname="l5k2c";
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Route</h1>
+          <h1 class="h3 mb-2 text-gray-800">Back-end</h1>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Route Tables</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Back-end Tables</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -339,8 +341,8 @@ $dbname="l5k2c";
                  <?php    
 
 // 2. Do a query
-$query  = "SELECT id, star, end, sover "; 
-$query .= "FROM route ";
+$query  = "SELECT id, name, idno, phone, date, start, destination, meal, ttype, pay "; 
+$query .= "FROM forder ";
 
 $result = mysqli_query($connection, $query);
 
@@ -352,7 +354,7 @@ if (!$result) {
 
 <html>
     <head>
-        
+       
         <link type="text/css" rel="stylesheet" >
         <style>
             .hello tr:hover {
@@ -366,10 +368,16 @@ if (!$result) {
 <table width="80%" border="double" cellpadding="2" cellspacing="1" align="center" class="hello">
                   <thead>
                     <tr>
-                      <th>Line ID</th>
-                      <th>Departure time</th>
-                      <th>Arrival time</th>    
-                      <th>Stop along the way</th>
+                      <th>The backend ID</th>
+                      <th>Customer ID</th>
+                      <th>Employee ID</th>
+                      <th>Bus ID</th>
+                      <th>Ticket ID</th>
+                      <th>Meal ID</th>
+                      <th>Bus departure</th>
+                      <th>Bus destination</th>  
+                      <th>Departure date</th>
+                      <th>Customer identity card</th>
                       <th>Update</th>
                       <th>Delete</th>
                     </tr>
@@ -380,19 +388,24 @@ if (!$result) {
 while ($row = mysqli_fetch_array($result)) {
     echo "<tr>";
     echo "<td>" . $row["id"] . "</td>";
-    echo "<td>" . $row["star"] . "</td>";
-    echo "<td>" . $row["end"] . "</td>";
-    echo "<td>" . $row["sover"] . "</td>";
-    echo "<td><a href='upr.php?id="  .$row["id"] . "'>Update Information</a></td>";  
-    echo "<td><a href='der.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
+    echo "<td>" . $row["name"] . "</td>";
+    echo "<td>" . $row["idno"] . "</td>";
+    echo "<td>" . $row["phone"] . "</td>";
+    echo "<td>" . $row["date"] . "</td>";
+    echo "<td>" . $row["start"] . "</td>";
+    echo "<td>" . $row["destination"] . "</td>";
+    echo "<td>" . $row["meal"] . "</td>";
+    echo "<td>" . $row["ttype"] . "</td>";
+     echo "<td>" . $row["pay"] . "</td>";
+    echo "<td><a href='upb.php?id="  .$row["id"] . "'>Update Information</a></td>";  
+    echo "<td><a href='deb.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
     echo "</tr>";
 }        
             
 ?>            
                     
        
-                </table>
- <a href="addr.php">Add a new route!</a>           
+                </table>       
               
 
 <?php
@@ -403,11 +416,7 @@ mysqli_free_result($result);
 // 5. close db connection
 mysqli_close($connection);
 
-?>
-                      
-                      
-                      
-                      
+?>  
                       
     </body>
                       </html>
@@ -423,13 +432,6 @@ mysqli_close($connection);
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
       <!-- End of Footer -->
 
     </div>
