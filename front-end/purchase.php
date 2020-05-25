@@ -70,22 +70,18 @@ if ($_POST['submit']) {
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>  
-						<h1><a href="index.html">Passengers</a></h1> 
+						<h1><a href="index.html">CBC</a></h1> 
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<div class="w3menu navbar-right">
 							<ul class="nav navbar">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li> 
-								<li><a href="gallery.html">Gallery</a></li>
-								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Pages</span><span class="caret"></span></a>
-									<ul class="dropdown-menu"> 
-										<li><a href="icons.html">Web Icons</a></li>
-										<li><a href="codes.html">Short Codes</a></li>
-									</ul>
-								</li>  
-								<li><a href="contact.html" class="active">Contact</a></li>
+								<li><a href="about.html" >About</a></li> 
+								 
+								<li><a href="purchase.php" class="active">Ticket Purchase</a></li>
+                                
+                            <li><a href="login.php">Login</a></li>
 							</ul>
 						</div> 
 						<div class="clearfix"> </div>  
@@ -107,7 +103,7 @@ if ($_POST['submit']) {
 	<div class="contact agileits">
 		<div class="container">  
 			<div class="agileits-title">
-				<h3>Contact Us</h3>
+				<h3>Ticket Purchase</h3>
 			</div>  
 			<div class="contact-agileinfo">
 				<div class="col-md-7 contact-form wthree">
@@ -192,10 +188,10 @@ if ($_POST['submit']) {
 				<div class="col-md-4 contact-right wthree">
 					<div class="contact-text w3-agileits">
 						<h4>GET IN TOUCH :</h4>
-						<p><i class="fa fa-map-marker"></i> Broome St, NY 10002, Canada. </p>
+						<p><i class="fa fa-map-marker"></i> Erxian bridge, Chengdu City, Sichuan</p>
 						<p><i class="fa fa-phone"></i> Telephone : +00 111 222 3333</p>
-						<p><i class="fa fa-fax"></i> FAX : +1 888 888 4444</p>
-						<p><i class="fa fa-envelope-o"></i> Email : <a href="mailto:example@mail.com">mail@example.com</a></p> 
+						
+						<p><i class="fa fa-envelope-o"></i> Email : <a href="mailto:chengdubus@mail.com">chengdubus@mail.com</a></p>
 					</div> 
 				</div> 
 				<div class="clearfix"> </div>	
@@ -207,115 +203,25 @@ if ($_POST['submit']) {
 
 	<!-- //map -->   
 	<!-- subscribe -->
-	<div class="subscribe jarallax">
-		<div class="container">
-			<div class="agileits-title title2">
-				<h3>Subscribe</h3>
-			</div>   
-			<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit sed quia non numquam eius.</p>
-			<form>
-				<input type="email" name="email" placeholder="Email Address" class="user" required="">
-				<input type="submit" value="Subscribe">
-			</form>
-			<p class="spam">We never share your information or use it to spam you</p>
-		</div>
-	</div>
+
 	<!-- //subscribe -->
 	<!-- features -->
-	<div class="features">
-		<div class="container">   
-			<div class="wthree-features-row">
-				<div class="col-md-6 features-w3grid">  
-					<div class="features-row2"> 
-						<div class="features-w3lleft">  
-							<h4>New User</h4>
-							<p>Register here to become a member</p>
-						</div>
-						<div class="features-w3lright">
-							<a href="#" class="w3ls-login" data-toggle="modal" data-target="#myModal2">Register</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div class="col-md-6 features-w3grid">  
-					<div class="features-row2"> 
-						<div class="features-w3lleft">  
-							<h4>Already a Member </h4>
-							<p>Please sign in here</p>
-						</div>
-						<div class="features-w3lright">
-							<a href="#" class="w3ls-login" data-toggle="modal" data-target="#myModal1">Login</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div> 
-				</div> 
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
+	
 	<!-- //features -->
 	<!-- login modal -->
-	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-					<img src="images/img5.png" class="img-responsive login-img" alt=""/>
-					<h4 class="modal-title">Don't Wait, Login now!</h4>
-				</div>
-				<div class="modal-body modal-body-sub"> 
-					<h3>Login to your account</h3>
-					<div class="register">
-						<form action="#" method="post">			
-							<input name="Email" placeholder="Email Address" type="text" required="">						
-							<input name="Password" placeholder="Password" type="password" required="">										
-							<div class="sign-up">
-								<input type="submit" value="Login"/>
-							</div>
-						</form>
-					</div>  
-				</div>
-			</div>
-		</div>
-	</div> 
+	
 	<!-- //login modal -->	
 	<!-- register modal -->
-	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-					<img src="images/img5.png" class="img-responsive login-img" alt=""/>
-					<h4 class="modal-title">Don't Wait, Register now!</h4>
-				</div>
-				<div class="modal-body modal-body-sub"> 
-					<div class="modal_body_left modal_body_left1"> 
-						<h3>Register to your account</h3>
-						<div class="register">
-							<form action="#" method="post">			
-								<input placeholder="Name" name="Name" type="text" required="">
-								<input placeholder="Email Address" name="Email" type="email" required="">	
-								<input placeholder="Password" name="Password" type="password" required="">	
-								<input placeholder="Confirm Password" name="Password" type="password" required="">
-								<div class="sign-up">
-									<input type="submit" value="Register"/>
-								</div>
-							</form>
-						</div> 		 
-					</div>  
-				</div>
-			</div>
-		</div>
-	</div> 
+	
 	<!-- //register modal -->	
 	<!-- footer -->
 	<div class="footer w3-w3layouts">
 		<div class="container"> 
 			<div class="footer-agileinfo">
 				<div class="col-md-4 col-sm-4 footer-wthreegrid">
-					<h3>About Me</h3> 
+					<h3>About Us</h3> 
 					<div class=" footerabt-w3text"> 
-						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi non nibh nec enim sollicitudin interdum. </p>
+						<p>Chengdu Bus Company provides customers with a quality experience of buying tickets online. </p>
 						<div class="social-w3licon">
 							<a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
 							<a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a> 
@@ -323,15 +229,16 @@ if ($_POST['submit']) {
 							<a href="#" class="social-button dribbble"><i class="fa fa-dribbble"></i></a> 
 						</div>  
 					</div>
+                    
 					<div class="clearfix"> </div>
 				</div>
 				<div class="col-md-4 col-sm-4 footer-wthreegrid">
-					<h3>Recent Posts</h3>
+					<h3>Contact Us</h3>
 					<ul>
-						<li><a href="#myModal" data-toggle="modal"><i class="fa fa-angle-right"></i>Vestibulum felis</a></li>
-						<li><a href="#myModal" data-toggle="modal"><i class="fa fa-angle-right"></i>Mauris at tellus</a></li>
-						<li><a href="#myModal" data-toggle="modal"><i class="fa fa-angle-right"></i>Donec ut lectus</a></li>
-						<li><a href="#myModal" data-toggle="modal"><i class="fa fa-angle-right"></i>Vitae interdum</a></li>
+						<p><i class="fa fa-map-marker"></i> Erxian bridge, Chengdu City, Sichuan</p><br/>
+						<p><i class="fa fa-phone"></i> Telephone : +00 111 222 3333</p><br/>
+						
+						<p><i class="fa fa-envelope-o"></i> Email : <a href="mailto:chengdubus@mail.com">chengdubus@mail.com</a></p><br/> 
 					</ul>
 				</div>
 				<div class="col-md-4 col-sm-4 footer-wthreegrid footer-tags">
@@ -339,20 +246,13 @@ if ($_POST['submit']) {
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
-						<li><a href="codes.html">Codes</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="purchase.php">Purchase Ticket</a></li>
 					</ul>
 				</div> 
 				<div class="clearfix"> </div>
 			</div>  
 		</div>
 	</div>
-	<div class="copy-right"> 
-		<div class="container">
-			<p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-		</div> 
-	</div> 
 	<!-- //footer -->   
 	<!-- footer modal -->
 	<div class="modal about-modal w3-agileits fade" id="myModal" tabindex="-1" role="dialog">
