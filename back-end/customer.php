@@ -99,6 +99,7 @@ $dbname="l5k2c";
             <a class="collapse-item" href="staff.php">Staff</a>
             <a class="collapse-item" href="ticket.php">Ticket</a>
             <a class="collapse-item" href="meal.php">Meal</a>
+              <a class="collapse-item" href="price.php">Price</a>
             <a class="collapse-item" href="bus.php">Bus</a>
             
           </div>
