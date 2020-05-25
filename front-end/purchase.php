@@ -16,6 +16,7 @@ if (mysqli_connect_errno()) {
 if ($_POST['submit']) {
     $name = $_POST['name'];
     $idno = $_POST['idno'];
+    $phone = $_POST['phone'];
     $start = $_POST['start'];
     $destination = $_POST['destination'];
     $date = $_POST['date'];
@@ -23,11 +24,12 @@ if ($_POST['submit']) {
     $ttype = $_POST['ttype'];
     $pay = $_POST['pay'];
 
+
     // 2. Do a query
     $query  = "INSERT INTO forder (name, idno, phone, start, destination, date, meal, ttype, pay ) "; 
-    $query .= "VALUES ('$name', '$idno', '$phone', '$start', '$destination', '$date', '$meal', '$ttype',  '$pay' ) ";
+    $query .= "VALUES ('$name', '$idno', '$phone', '$start', '$destination', '$date', '$meal', '$ttype',  '$pay') ";
     
-    echo $query;
+    //echo $query;
 
     $result = mysqli_query($connection, $query);
     
@@ -112,17 +114,17 @@ if ($_POST['submit']) {
 					
     <form action="purchase.php" method="post">
            
-    <div class="col-md-7 contact-form wthree">
-    <input type="text" name="name" class="" placeholder="Customer Name"> </div>
+    <div class="form-group">
+    <input type="text" name="name" class="form-control" placeholder="name"> </div>
 
-    <div class="col-md-7 contact-form wthree">
-    <input type="text" name="idno" class="" placeholder="ID Number"> </div><br/>
+    <div class="form-group">
+    <input type="text" name="idno" class="form-control" placeholder="ID"> </div>
 
-    <div class="col-md-7 contact-form wthree">
-    <input type="text" name="phone" class="" placeholder="Customer Phone"> </div>
-	
-    <div class="col-md-7 contact-form wthree">
-    <input type="date" name="date" class="" placeholder="Departure Time"> </div>
+    <div class="form-group">
+    <input type="text" name="phone" class="form-control" placeholder="Phone"> </div>
+    
+    <div class="form-group">
+    <input type="date" name="date" class="form-control" placeholder="date"> </div>
     
     <div class="form-group">
     <select id="type" name="start" onchange="change_country(this.value)" class="frm-field required">
@@ -130,28 +132,25 @@ if ($_POST['submit']) {
             <option value="null">--Select Starting Station--</option>         
             <option value="chengdu">Chengdu</option>
 
-            <option value="ya'an">Ya'an</option>
-
             <option value="kangding">Kangding</option>
 
          </select></div>
-                        
+    
     <div class="form-group">
     <select id="type" name="destination" onchange="change_country(this.value)" class="frm-field required">
 
-            <option value="null">--Select Destination Station--</option>         
+           <option value="null">--Select Destination Station--</option>         
             <option value="chengdu">Chengdu</option>
-
-            <option value="ya'an">Ya'an</option>
 
             <option value="kangding">Kangding</option>
 
          </select></div>
-                        
+    
     <div class="form-group">
     <select id="type" name="meal" onchange="change_country(this.value)" class="frm-field required">
 
-            <option value="null">--Select Meal--</option>         
+            <option value="null">--Select Meal--</option>   
+        
             <option value="bread">Bread</option>
 
             <option value="chinese set meal">Chinese set meal</option>
@@ -159,7 +158,7 @@ if ($_POST['submit']) {
             <option value="Western set meal">Western set meal</option>
 
          </select></div>
-                        
+    
     <div class="form-group">
     <select id="type" name="ttype" onchange="change_country(this.value)" class="frm-field required">
 
@@ -169,8 +168,8 @@ if ($_POST['submit']) {
             <option value="Business">Business</option>
 
          </select></div>
-                        
-     <div class="form-group">
+    
+ <div class="form-group">
     <select id="type" name="pay" onchange="change_country(this.value)" class="frm-field required">
 
             <option value="null">--Select Payment Way--</option>         
@@ -183,8 +182,9 @@ if ($_POST['submit']) {
             <option value="wechat">WeChat</option>
 
          </select></div>
+    
                         
-    <input type="submit" value="SUBMIT">
+    <input type="submit" value="Submit" name="submit" class="btn btn-primary">
 					
                 </form>
                     
