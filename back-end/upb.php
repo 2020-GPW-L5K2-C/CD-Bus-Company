@@ -57,7 +57,7 @@ $dbname="l5k2c";
 $updateid = $_GET['id'];
 
 // 2. Do a query
-$query  = "SELECT id, c_id, s_id, b_id, t_id, star, end, date, cusidno, pay "; 
+$query  = "SELECT id, c_id, s_id, b_id, t_id, m_id, star, end, date, cusidno, pay "; 
 $query .= "FROM back ";
 $query .= "WHERE id = $updateid";
 
@@ -94,4 +94,4 @@ $row = mysqli_fetch_array($result);
 // 5. close db connection
 mysqli_close($connection);
 
-?>
+
