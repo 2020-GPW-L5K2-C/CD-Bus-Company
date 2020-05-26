@@ -33,7 +33,7 @@ if ($_POST['submit']) {
 
 ?>
 
-<form action="ab.php" method="post">
+<form action="adds.php" method="post">
 Staff ID: <input type="int" name="id"> <br/>
  Name : <input type="text" name="name"> <br/>
     Gender: <input type="text" name="gender"> <br/>
