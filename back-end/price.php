@@ -368,8 +368,8 @@ if (!$result) {
                       <th>Licence</th>
                       <th>Employee ID</th>
                       <th>Staff ID</th>
-                      <th>ROUTE ID</th>
-                      <th>Update</th>
+                      <th>Route ID</th>
+            
                       <th>Delete</th>
                     </tr>
                   </thead>
