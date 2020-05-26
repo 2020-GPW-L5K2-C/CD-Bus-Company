@@ -22,14 +22,15 @@ if ($_POST['submit']) {
     $b_id = $_POST['b_id'];
     $t_id = $_POST['t_id'];
     $m_id = $_POST['m_id'];
+    $star = $_POST['star'];
     $end = $_POST['end'];
     $date = $_POST['date'];
     $cusidno = $_POST['cusidno'];
     $pay = $_POST['pay'];
 
     // 2. Do a query
-    $query  = "INSERT INTO patient (id, c_id , s_id, b_id, t_id, m_id, star, end, date, cusidno, pay) "; 
-    $query .= "VALUES ('$id', '$c_id ', '$s_id', '$b_id', '$t_id'. '$m_id', '$end', '$date', '$cusidno', '$pay' ) ";
+    $query  = "INSERT INTO back (id, c_id , s_id, b_id, t_id, m_id, star, end, date, cusidno, pay) "; 
+    $query .= "VALUES ('$id', '$c_id ', '$s_id', '$b_id', '$t_id'. '$m_id', '$end', '$date', '$cusidno', '$pay') ";
 
     echo $query;
 
@@ -52,3 +53,4 @@ The backend ID: <input type="int" name="id"> <br/>
     Payment: <input type="text" name="pay"> <br/>
     <input type="submit" name="submit">
 </form>
+?>
