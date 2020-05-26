@@ -17,14 +17,14 @@ $dbname="l5k2c";
 
 if ($_POST['submit']) {
     $id = $_POST['id'];
-    $name = $_POST['name'];
-    $gender = $_POST['gender'];
-    $idno = $_POST['idno'];
+    $star = $_POST['star'];
+    $end = $_POST['end'];
+    $sover = $_POST['sover'];
     
 
     // 2. Do a query
-    $query  = "INSERT INTO customer (id, name, gender, idno) "; 
-    $query .= "VALUES ('$id', '$name', '$gender', '$idno') ";
+    $query  = "INSERT INTO route (id, star, end, sover) "; 
+    $query .= "VALUES ('$id', '$star', '$end', '$sover') ";
 
     echo $query;
 
@@ -33,11 +33,11 @@ if ($_POST['submit']) {
 
 ?>
 
-<form action="ab.php" method="post">
+<form action="addr.php" method="post">
 Line ID: <input type="int" name="id"> <br/>
-  Departure time: <input type="int" name="name"> <br/>
-    Arrival time: <input type="int" name="gender"> <br/>
-    Stop along the way: <input type="int" name="idno"> <br/>
+  Departure time: <input type="date" name="star"> <br/>
+    Arrival time: <input type="date" name="end"> <br/>
+    Stop along the way: <input type="text" name="sover"> <br/>
    
     <input type="submit" name="submit">
 </form>
