@@ -36,7 +36,7 @@ if ($_POST['submit']) {
 <form action="ap.php" method="post">
 Price ID: <input type="int" name="id"> <br/>
   Licence: <input type="text" name="li"> <br/>
-  Staff ID: <input type="r_id" name="s_id"> <br/>
+  Staff ID: <input type="int" name="s_id"> <br/>
     Route ID: <input type="int" name="r_id"> <br/>
    
     <input type="submit" name="submit">
