@@ -99,7 +99,7 @@ $dbname="l5k2c";
             <a class="collapse-item" href="staff.php">Staff</a>
             <a class="collapse-item" href="ticket.php">Ticket</a>
             <a class="collapse-item" href="meal.php">Meal</a>
-              <a class="collapse-item" href="price.php">Price</a>
+            <a class="collapse-item" href="price.php">Price</a>  
             <a class="collapse-item" href="bus.php">Bus</a>
             
           </div>
@@ -123,8 +123,6 @@ $dbname="l5k2c";
           <i class="fas fa-fw fa-cog"></i>
           <span>Login</span></a>
       </li>
-        
-
       
 
 
@@ -324,12 +322,12 @@ $dbname="l5k2c";
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Customer</h1>
+          <h1 class="h3 mb-2 text-gray-800">Back-end</h1>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Customer Tables</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Back-end Tables</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -339,10 +337,8 @@ $dbname="l5k2c";
                  <?php    
 
 // 2. Do a query
-$query  = "SELECT id, name, gender, idno "; 
-$query .= "FROM customer ";
-
-//echo $query;
+$query  = "SELECT id, li, s_id, r_id "; 
+$query .= "FROM price ";
 
 $result = mysqli_query($connection, $query);
 
@@ -350,67 +346,65 @@ if (!$result) {
     die("query is wrong");
 }
 
-//require_once('includes/header.php');
-
 ?>
 
 <html>
+    <head>
+       
+        <link type="text/css" rel="stylesheet" >
+        <style>
+            .hello tr:hover {
+        background-color:gainsboro;
+            }
+        
+        </style>
+    </head>
     
-
     <body>
-
- <table width="80%" border="double" cellpadding="10" cellspacing="10" align="center" border = "10">
-     <tr>
-         <td><h4>ID</h4></td>
-         <td><h4>Name</h4></td>
-         <td><h4>Gender</h4></td>
-         <td><h4>ID card NO.</h4></td>
-         <td><h4>Delete</h4></td>
-         <td><h4>Update</h4></td>
-     </tr>
-     
-<?php
+<table width="80%" border="double" cellpadding="2" cellspacing="1" align="center" class="hello">
+                  <thead>
+                    <tr>
+                      <th>Price ID</th>
+                      <th>Licence</th>
+                      <th>Employee ID</th>
+                      <th>Staff ID</th>
+                      <th>ROUTE ID</th>
+                      <th>Update</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                     <?php
 
 // 3. use/show data
 while ($row = mysqli_fetch_array($result)) {
     echo "<tr>";
     echo "<td>" . $row["id"] . "</td>";
-    echo "<td>" . $row["name"] . "</td>";
-    echo "<td>" . $row["gender"] . "</td>";
-    echo "<td>" . $row["idno"] . "</td>";
+     echo "<td>" . $row["li"] . "</td>";
+    echo "<td>" . $row["s_id"] . "</td>";
+    echo "<td>" . $row["r_id"] . "</td>";
     
-    echo "<td><a href='decus.php?id=" . 
-        $row["id"] . "'>Delete</a></td>";    
-    echo "<td><a href='upcus.php?id=" . 
-        $row["id"] . "'>Update</a></td>";
-
+     
+    echo "<td><a href='upp.php?id="  .$row["id"] . "'>Update Information</a></td>";  
+    echo "<td><a href='dep.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
     echo "</tr>";
-    
-    }
-    
-?>
-  </table>
+}        
+            
+?>            
+                    
+       
+                </table>
+ <a href="ap.php">Add a new!</a>           
+              
 
-    <a href="addcus.php">
-        <input name = "Add" type="button" value="Add" style="margin-left:140px;margin-top:20px"; >
-        </a>
-
-        
-   
 <?php
 
 // 4. free results
 mysqli_free_result($result);
 
-
 // 5. close db connection
 mysqli_close($connection);
 
-?> 
-                      
-                      
-                      
-                      
+?>  
                       
     </body>
                       </html>
