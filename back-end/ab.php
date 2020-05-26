@@ -29,8 +29,8 @@ if ($_POST['submit']) {
     $pay = $_POST['pay'];
 
     // 2. Do a query
-    $query  = "INSERT INTO back (id, c_id , s_id, b_id, t_id, m_id, star, end, date, cusidno, pay) "; 
-    $query .= "VALUES ('$id', '$c_id ', '$s_id', '$b_id', '$t_id'. '$m_id', '$star', '$end', '$date', '$cusidno', '$pay') ";
+    $query  = "INSERT INTO back (id, c_id, s_id, b_id, t_id, m_id, star, end, date, cusidno, pay) "; 
+    $query .= "VALUES ('$id', '$c_id', '$s_id', '$b_id', '$t_id', '$m_id', '$star', '$end', '$date', '$cusidno', '$pay') ";
 
     echo $query;
 
@@ -41,7 +41,7 @@ if ($_POST['submit']) {
 
 <form action="ab.php" method="post">
 The backend ID: <input type="int" name="id"> <br/>
-   Customer ID: <input type="int" name="c_id "> <br/>
+   Customer ID: <input type="int" name="c_id"> <br/>
     Staff ID: <input type="int" name="s_id"> <br/>
     Bus ID: <input type="int" name="b_id"> <br/>
     Ticket ID: <input type="int" name="t_id"> <br/>
@@ -53,4 +53,4 @@ The backend ID: <input type="int" name="id"> <br/>
     Payment: <input type="text" name="pay"> <br/>
     <input type="submit" name="submit">
 </form>
-?>
+
