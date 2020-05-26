@@ -106,7 +106,7 @@ if (mysqli_connect_errno()) {
             <a class="collapse-item" href="meal.php">Meal</a>
             <a class="collapse-item" href="price.php">Price</a>  
             <a class="collapse-item" href="bus.php">Bus</a>
-            
+            <a class="collapse-item" href="route.php">Route</a>  
           </div>
         </div>
       </li>
@@ -387,7 +387,7 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["licence"] . "</td>";
     echo "<td>" . $row["s_id"] . "</td>";
     echo "<td>" . $row["r_id"] . "</td>";
-    echo "<td><a href='ubus.php?id="  .$row["id"] . "'>Update Information</a></td>";  
+   
     echo "<td><a href='dbus.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
     echo "</tr>";
 }        
