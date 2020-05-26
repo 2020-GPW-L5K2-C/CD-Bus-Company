@@ -262,7 +262,7 @@ if (!$result) {
                       <th>Bus destination</th>  
                       <th>Departure date</th>
                       <th>Customer identity card</th>
-                      <th>Update</th>
+                      
                       <th>Delete</th>
                     </tr>
                   </thead>
@@ -281,7 +281,7 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["meal"] . "</td>";
     echo "<td>" . $row["ttype"] . "</td>";
      echo "<td>" . $row["pay"] . "</td>";
-    echo "<td><a href='upf.php?id="  .$row["id"] . "'>Update Information</a></td>";  
+    
     echo "<td><a href='def.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
     echo "</tr>";
 }        
