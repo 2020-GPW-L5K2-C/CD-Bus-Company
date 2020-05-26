@@ -1,21 +1,3 @@
-<?php
-
-  //1. Open database connection
-  $dbhost="localhost";
-$dbuser="384b42c3dfd9";
-$dbpass="72362cd8cff8bd36";
-$dbname="l5k2c";
-  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-  // Test if connection is ok
-  if  (mysqli_connect_errno()) {
-       die("Database connection failed: " .
-           mysqli_connect_error() . 
-           " (" . mysqli_connect_error() . ")"
-      );
-  }
-
-   ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,30 +33,21 @@ $dbname="l5k2c";
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">CBC <sup></sup></div>
+        <div class="sidebar-brand-text mx-3">CBC<sup></sup></div>
       </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Homepage</span></a>
       </li>
 
       <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      
-
-      <!-- Nav Item - Pages Collapse Menu -->
-
-      <!-- Nav Item - Utilities Collapse Menu -->
-      <!-- Divider -->
-   <div class="sidebar-heading">
+<div class="sidebar-heading">
         Main
       </div>
         
@@ -95,7 +68,7 @@ $dbname="l5k2c";
             <a class="collapse-item" href="staff.php">Staff</a>
             <a class="collapse-item" href="ticket.php">Ticket</a>
             <a class="collapse-item" href="meal.php">Meal</a>
-            <a class="collapse-item" href="price.php">Price</a>  
+            <a class="collapse-item" href="price.php">Price</a>
             <a class="collapse-item" href="bus.php">Bus</a>
             
           </div>
@@ -119,6 +92,12 @@ $dbname="l5k2c";
           <i class="fas fa-fw fa-cog"></i>
           <span>Login</span></a>
       </li>
+        
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
 
     </ul>
     <!-- End of Sidebar -->
@@ -158,133 +137,22 @@ $dbname="l5k2c";
                 <i class="fas fa-search fa-fw"></i>
               </a>
               <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
+      
 
             <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">3+</span>
-              </a>
+         
               <!-- Dropdown - Alerts -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header">
-                  Alerts Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-primary">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 12, 2019</div>
-                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-success">
-                      <i class="fas fa-donate text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 7, 2019</div>
-                    $290.29 has been deposited into your account!
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-warning">
-                      <i class="fas fa-exclamation-triangle text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">December 2, 2019</div>
-                    Spending Alert: We've noticed unusually high spending for your account.
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-              </div>
-            </li>
+             
 
             <!-- Nav Item - Messages -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
+           
                 <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">7</span>
-              </a>
+               
               <!-- Dropdown - Messages -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                  Message Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
-                    <div class="small text-gray-500">Emily Fowler · 58m</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
-                    <div class="status-indicator"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
-                    <div class="small text-gray-500">Jae Chun · 1d</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
-                    <div class="status-indicator bg-warning"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
-                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
-                    <div class="status-indicator bg-success"></div>
-                  </div>
-                  <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
-                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-              </div>
-            </li>
-
-            <div class="topbar-divider d-none d-sm-block"></div>
+         
 
             <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-              </a>
+           
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
@@ -317,7 +185,8 @@ $dbname="l5k2c";
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Charts</h1>
-          
+        
+
           <!-- Content Row -->
           <div class="row">
 
@@ -326,20 +195,20 @@ $dbname="l5k2c";
               <!-- Area Chart -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Income</h6>
                 </div>
                 <div class="card-body">
                   <div class="chart-area">
                     <canvas id="myAreaChart"></canvas>
                   </div>
-                  
+                 
                 </div>
               </div>
 
               <!-- Bar Chart -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Ticket status</h6>
                 </div>
                 <div class="card-body">
                   <div class="chart-bar">
@@ -356,15 +225,13 @@ $dbname="l5k2c";
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Donut Chart</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">WeChat & Alipay ratio</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="chart-pie pt-4">
                     <canvas id="myPieChart"></canvas>
                   </div>
-                  <hr>
-                  
                 </div>
               </div>
             </div>
@@ -377,13 +244,7 @@ $dbname="l5k2c";
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
+        
       <!-- End of Footer -->
 
     </div>
@@ -430,9 +291,9 @@ $dbname="l5k2c";
   <script src="vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="js/demo/chart-bar-demo.js"></script>
+  <script src="js/demo/chart-area-demo.php"></script>
+  <script src="js/demo/chart-pie-demo.php"></script>
+  <script src="js/demo/chart-bar-demo.php"></script>
 
 </body>
 

@@ -1,3 +1,44 @@
+<?php
+
+  //1. Open database connection
+$dbhost="localhost";
+$dbuser="384b42c3dfd9";
+$dbpass="72362cd8cff8bd36";
+$dbname="l5k2c";
+$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+
+  // Test if connection is ok
+  if  (mysqli_connect_errno()) {
+       die("Database connection failed: " .
+           mysqli_connect_error() . 
+           " (" . mysqli_connect_error() . ")"
+      );
+  }
+
+$query  = " SELECT amount, month ";
+$query .= " from area ";
+$query .= " order by id ";
+
+
+//echo $query;
+
+$result = mysqli_query($connection, $query);
+
+
+if (!$result) {
+    die("query is wrong");
+}
+
+while ($row = mysqli_fetch_array($result)) {
+
+        $labels1 .= '"' . $row['month'] . '", ';
+        $data1 .= $row['amount'] . ', ';
+
+
+}
+
+?>
+
 // Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
@@ -32,7 +73,7 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: [<?php echo $labels1; ?>],
     datasets: [{
       label: "Earnings",
       lineTension: 0.3,
@@ -46,7 +87,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: [<?php echo $data1; ?>],
     }],
   },
   options: {
