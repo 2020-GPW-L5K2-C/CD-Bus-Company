@@ -35,9 +35,9 @@ if ($_POST['submit']) {
 
 <form action="addcus.php" method="post">
 ID: <input type="int" name="id"> <br/>
-  Name: <input type="date" name="name"> <br/>
-   Gender: <input type="date" name="gender"> <br/>
-    ID card NO.: <input type="text" name="idno"> <br/>
+  Name: <input type="text" name="name"> <br/>
+   Gender: <input type="text" name="gender"> <br/>
+    ID card NO.: <input type="int" name="idno"> <br/>
    
     <input type="submit" name="submit">
 </form>
