@@ -30,7 +30,7 @@ if ($_POST['submit']) {
 
     // 2. Do a query
     $query  = "INSERT INTO back (id, c_id , s_id, b_id, t_id, m_id, star, end, date, cusidno, pay) "; 
-    $query .= "VALUES ('$id', '$c_id ', '$s_id', '$b_id', '$t_id'. '$m_id', '$end', '$date', '$cusidno', '$pay') ";
+    $query .= "VALUES ('$id', '$c_id ', '$s_id', '$b_id', '$t_id'. '$m_id', '$star', '$end', '$date', '$cusidno', '$pay') ";
 
     echo $query;
 
