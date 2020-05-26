@@ -374,7 +374,7 @@ if (!$result) {
                       <th>License plate number</th>
                       <th>Staff ID</th>    
                       <th>Route ID</th>
-                      <th>Update</th>
+
                       <th>Delete</th>
                     </tr>
                   </thead>
