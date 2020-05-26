@@ -17,8 +17,8 @@ $dbname="l5k2c";
 
    if ($_POST['submit']) {
     $id = $_POST['id'];
-       $c_id = $_POST['c_id'];
-       $s_id = $_POST['s_id'];
+    $c_id = $_POST['c_id'];
+    $s_id = $_POST['s_id'];
     $b_id = $_POST['b_id'];
     $t_id = $_POST['t_id'];
     $m_id = $_POST['m_id'];
@@ -35,7 +35,7 @@ $dbname="l5k2c";
     $query .= "id = '$id' "; 
     $query .= "c_id = '$c_id' "; 
     $query .= "s_id = '$s_id' "; 
-     $query .= "b_id = '$b_id' "; 
+    $query .= "b_id = '$b_id' "; 
         $query .= "t_id = '$t_id' "; 
         $query .= "m_id = '$m_id' "; 
         $query .= "star = '$star' "; 
