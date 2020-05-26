@@ -393,7 +393,7 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["star"] . "</td>";
     echo "<td>" . $row["end"] . "</td>";
     echo "<td>" . $row["date"] . "</td>";
-     echo "<td>" . $row["cusidno"] . "</td>";
+    echo "<td>" . $row["cusidno"] . "</td>";
     echo "<td>" . $row["pay"] . "</td>";
     echo "<td><a href='upb.php?id="  .$row["id"] . "'>Update Information</a></td>";  
     echo "<td><a href='deb.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
