@@ -18,7 +18,7 @@ $dbname="l5k2c";
 $deleteid = $_GET['id'];
 
 // 2. Do a query
-$query  = "DELETE FROM sover "; 
+$query  = "DELETE FROM route "; 
 $query .= "WHERE id = $deleteid";
 
 $result = mysqli_query($connection, $query);
