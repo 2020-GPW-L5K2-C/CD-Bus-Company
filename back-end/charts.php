@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Homepage</span></a>
       </li>
@@ -195,7 +195,7 @@
               <!-- Area Chart -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Income</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Income Status</h6>
                 </div>
                 <div class="card-body">
                   <div class="chart-area">
@@ -208,7 +208,7 @@
               <!-- Bar Chart -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Ticket status</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Ticket Status</h6>
                 </div>
                 <div class="card-body">
                   <div class="chart-bar">
@@ -225,7 +225,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">WeChat & Alipay ratio</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">WeChat & Alipay Ratio</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
