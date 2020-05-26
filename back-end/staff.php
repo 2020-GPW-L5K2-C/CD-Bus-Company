@@ -101,7 +101,7 @@ $dbname="l5k2c";
             <a class="collapse-item" href="meal.php">Meal</a>
             <a class="collapse-item" href="price.php">Price</a>  
             <a class="collapse-item" href="bus.php">Bus</a>
-            
+            <a class="collapse-item" href="route.php">Route</a>  
           </div>
         </div>
       </li>
@@ -380,9 +380,7 @@ while ($row = mysqli_fetch_array($result)) {
     
     echo "<td><a href='des.php?id=" . 
         $row["id"] . "'>Delete</a></td>";    
-    echo "<td><a href='ups.php?id=" . 
-        $row["id"] . "'>Update</a></td>";
-
+    
     echo "</tr>";
     
     }
