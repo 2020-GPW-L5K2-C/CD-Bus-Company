@@ -366,7 +366,7 @@ if (!$result) {
                     <tr>
                       <th>The backend ID</th>
                       <th>Customer ID</th>
-                      <th>Employee ID</th>
+                      <th>Staff ID</th>
                       <th>Bus ID</th>
                       <th>Ticket ID</th>
                       <th>Meal ID</th>
