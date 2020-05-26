@@ -81,7 +81,7 @@ if ($_POST['submit']) {
 								 
 								<li><a href="purchase.php" class="active">Ticket Purchase</a></li>
                                 
-                            <li><a href="login.php">Login</a></li>
+                            <li><a href="back-end/login.php">Login</a></li>
 							</ul>
 						</div> 
 						<div class="clearfix"> </div>  
