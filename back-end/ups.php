@@ -22,7 +22,7 @@ if ($_POST['submit']) {
     $p = $_POST['p'];
     
     // 2. Do a query
-    $query  = "UPDATE component SET "; 
+    $query  = "UPDATE staff SET "; 
     $query .= "id = '$id', "; 
     $query .= "name = '$name', "; 
     $query .= "gender = '$gender', "; 
