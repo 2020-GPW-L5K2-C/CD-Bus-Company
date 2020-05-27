@@ -32,16 +32,16 @@ $dbname="l5k2c";
     
     // 2. Do a query
     $query  = "UPDATE back SET "; 
-    $query .= "id = '$id' "; 
-    $query .= "c_id = '$c_id' "; 
-    $query .= "s_id = '$s_id' "; 
-    $query .= "b_id = '$b_id' "; 
-        $query .= "t_id = '$t_id' "; 
-        $query .= "m_id = '$m_id' "; 
-        $query .= "star = '$star' "; 
-        $query .= "end = '$end' "; 
-        $query .= "date = '$date' "; 
-        $query .= "cusidno = '$cusidno' "; 
+    $query .= "id = '$id', "; 
+    $query .= "c_id = '$c_id', "; 
+    $query .= "s_id = '$s_id', "; 
+    $query .= "b_id = '$b_id', "; 
+        $query .= "t_id = '$t_id', "; 
+        $query .= "m_id = '$m_id', "; 
+        $query .= "star = '$star', "; 
+        $query .= "end = '$end', "; 
+        $query .= "date = '$date', "; 
+        $query .= "cusidno = '$cusidno', "; 
         $query .= "pay = '$pay' "; 
     $query .= "WHERE id = $id";
 
