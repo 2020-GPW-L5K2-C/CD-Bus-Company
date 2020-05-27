@@ -370,6 +370,7 @@ if (!$result) {
 
                       <th>Route ID</th>
                       <th>Price</th>
+                      <th>Update</th>  
                       <th>Delete</th>
                     </tr>
                   </thead>
@@ -383,6 +384,7 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["s_id"] . "</td>";
     echo "<td>" . $row["r_id"] . "</td>";
     echo "<td>" . $row["price"] . "</td>";
+    echo "<td><a href='upp.php?id="  .$row["id"] . "'>Update Information</a></td>"; 
     echo "<td><a href='dep.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
     echo "</tr>";
 }        
