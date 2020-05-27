@@ -290,8 +290,9 @@ mysqli_free_result($result);
 mysqli_close($connection);
 
 ?>  
-                      
-    </body>
+    </div>
+    
+    
                       </html>
                     </thead>
                   </table>
