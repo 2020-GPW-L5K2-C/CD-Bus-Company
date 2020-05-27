@@ -242,7 +242,7 @@ if (!$result) {
                       <th>Departure time</th>
                       <th>Arrival time</th>    
                       <th>Stop along the way</th>
-                      
+                      <th>Update</th>
                       <th>Delete</th>
                     </tr>
                   </thead>
@@ -255,7 +255,7 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["star"] . "</td>";
     echo "<td>" . $row["end"] . "</td>";
     echo "<td>" . $row["sover"] . "</td>";
-   
+    echo "<td><a href='upr.php?id="  .$row["id"] . "'>Update Information</a></td>"; 
     echo "<td><a href='der.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
     echo "</tr>";
 }        
