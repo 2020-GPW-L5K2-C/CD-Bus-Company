@@ -36,9 +36,9 @@ if ($_POST['submit']) {
     $query .= "date = '$date', "; 
     $query .= "start = '$start', "; 
     $query .= "destination = '$destination', "; 
-    $query .= "meal = '$meal' "; 
-    $query .= "ttype = '$ttype' "; 
-    $query .= "pay = '$pay' "; 
+    $query .= "meal = '$meal', "; 
+    $query .= "ttype = '$ttype', "; 
+    $query .= "pay = '$pay', "; 
     $query .= "WHERE id = $id";
 
     $result = mysqli_query($connection, $query);
