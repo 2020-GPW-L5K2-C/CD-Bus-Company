@@ -272,7 +272,7 @@ while ($row = mysqli_fetch_array($result)) {
 ?>
   </table>
 
-    <a href="ab.php">Add a new!</a>  
+    <a href="addcus.php">Add a new!</a>  
         
    
 <?php
