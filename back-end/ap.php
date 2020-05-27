@@ -20,11 +20,11 @@ if ($_POST['submit']) {
     $li = $_POST['li'];
     $s_id = $_POST['s_id'];
     $r_id = $_POST['r_id'];
-    
+     $price = $_POST['price'];
 
     // 2. Do a query
-    $query  = "INSERT INTO price (id, li, s_id, r_id) "; 
-    $query .= "VALUES ('$id', '$li', '$s_id', '$r_id') ";
+    $query  = "INSERT INTO price (id, li, s_id, r_id, price) "; 
+    $query .= "VALUES ('$id', '$li', '$s_id', '$r_id', '$price') ";
 
     echo $query;
 
@@ -244,7 +244,7 @@ Price ID: <input type="int" name="id"> <br/>
   Licence: <input type="text" name="li"> <br/>
   Staff ID: <input type="int" name="s_id"> <br/>
     Route ID: <input type="int" name="r_id"> <br/>
-   
+  Price: <input type="text" name="price"> <br/>
     <input type="submit" name="submit">
 </form>
 
