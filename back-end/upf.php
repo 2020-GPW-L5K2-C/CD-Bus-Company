@@ -70,7 +70,7 @@ $row = mysqli_fetch_array($result);
 ?>
 
 <form action="upf.php" method="post">
-    <input type="int" name="id" value="<?php echo $row["id"]; ?>">
+   ID <input type="int" name="id" value="<?php echo $row["id"]; ?>"><br/>
     Name: <input type="varchar" name="name" value="<?php echo $row["name"]; ?>"> <br/>
     Gender: <input type="text" name="idno" value="<?php echo $row["idno"]; ?>"> <br/>
    Phone : <input type="text" name="phone" value="<?php echo $row["phone"]; ?>"> <br/>
