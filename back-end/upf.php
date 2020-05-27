@@ -38,12 +38,15 @@ if ($_POST['submit']) {
     $query .= "destination = '$destination', "; 
     $query .= "meal = '$meal', "; 
     $query .= "ttype = '$ttype', "; 
-    $query .= "pay = '$pay', "; 
+    $query .= "pay = '$pay' "; 
     $query .= "WHERE id = $id";
 
+    echo $query;
+    
     $result = mysqli_query($connection, $query);
     
-   header('Location: forder.php');
+    die('stop');
+
 }
 
 
@@ -73,7 +76,6 @@ $row = mysqli_fetch_array($result);
    Phone : <input type="text" name="phone" value="<?php echo $row["phone"]; ?>"> <br/>
    Date : <input type="date" name="date" value="<?php echo $row["date"]; ?>"> <br/>
     Start: <input type="text" name="start" value="<?php echo $row["start"]; ?>"> <br/>
-    
     Destination: <input type="text" name="destination" value="<?php echo $row["destination"]; ?>"> <br/>
     meal: <input type="text" name="meal" value="<?php echo $row["meal"]; ?>"> <br/>
     type: <input type="text" name="ttype" value="<?php echo $row["ttype"]; ?>"> <br/>
