@@ -21,15 +21,17 @@ if ($_POST['submit']) {
     $end = $_POST['end'];
     $sover = $_POST['sover'];
     
+    
+    
     // 2. Do a query
     $query  = "UPDATE route SET "; 
     $query .= "id = '$id', "; 
-    $query .= "name = '$name', "; 
+    $query .= "star = '$star', "; 
     $query .= "end = '$end', "; 
     $query .= "sover = '$sover' "; 
     $query .= "WHERE id = $id";
 
-   echo $query;
+    echo $query;
     
     $result = mysqli_query($connection, $query);
     
@@ -40,11 +42,12 @@ if ($_POST['submit']) {
 
 $updateid = $_GET['id'];
 
-
 // 2. Do a query
 $query  = "SELECT id, star, end, sover "; 
 $query .= "FROM route ";
 $query .= "WHERE id = $updateid";
+
+
 $result = mysqli_query($connection, $query);
 
 if (!$result) {
@@ -57,7 +60,7 @@ $row = mysqli_fetch_array($result);
 ?>
 
 <form action="upr.php" method="post">
-   ID <input type="int" name="id" value="<?php echo $row["id"]; ?>"><br/>
+  Price ID: <input type="int" name="id" value="<?php echo $row["id"]; ?>"><br/>
   Departure time: <input type="date" name="star" value="<?php echo $row["star"]; ?>"> <br/>
   Arrival time: <input type="date" name="end" value="<?php echo $row["end"]; ?>"> <br/>
   Stop along the way: <input type="text" name="sover" value="<?php echo $row["sover"]; ?>"> <br/>
