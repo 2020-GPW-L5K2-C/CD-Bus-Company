@@ -23,19 +23,22 @@ if ($_POST['submit']) {
     
     // 2. Do a query
     $query  = "UPDATE staff SET "; 
-    $query .= "id = '$id', "; 
-    $query .= "name = '$name', "; 
-    $query .= "gender = '$gender', "; 
-    $query .= "p = '$p', "; 
+    $query .= "id = '$id' "; 
+    $query .= "name = '$name' "; 
+    $query .= "gender = '$gender' "; 
+    $query .= "p = '$p' "; 
     $query .= "WHERE id = $id";
 
+     echo $query;
+    
     $result = mysqli_query($connection, $query);
     
-   header('Location: staff.php');
+    die('stop');
+
 }
 
 
-$updateid = $_GET['id'];
+$id = $_GET['id'];
 
 // 2. Do a query
 $query  = "SELECT id, name, gender, p "; 
