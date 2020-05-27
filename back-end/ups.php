@@ -38,7 +38,7 @@ if ($_POST['submit']) {
 }
 
 
-$id = $_GET['id'];
+$updateid = $_GET['id'];
 
 // 2. Do a query
 $query  = "SELECT id, name, gender, p "; 
