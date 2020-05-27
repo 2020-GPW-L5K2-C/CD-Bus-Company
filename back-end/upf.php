@@ -43,7 +43,7 @@ if ($_POST['submit']) {
 
     $result = mysqli_query($connection, $query);
     
-   header('Location: upf.php');
+   header('Location: forder.php');
 }
 
 
