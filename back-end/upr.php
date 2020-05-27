@@ -22,7 +22,7 @@ if ($_POST['submit']) {
     $sover = $_POST['sover'];
     
     // 2. Do a query
-    $query  = "UPDATE staff SET "; 
+    $query  = "UPDATE route SET "; 
     $query .= "id = '$id', "; 
     $query .= "name = '$name', "; 
     $query .= "end = '$end', "; 
@@ -59,8 +59,8 @@ $row = mysqli_fetch_array($result);
 
 <form action="upr.php" method="post">
     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-  Departure time: <input type="text" name="star" value="<?php echo $row["star"]; ?>"> <br/>
-  Arrival time: <input type="text" name="end" value="<?php echo $row["end"]; ?>"> <br/>
+  Departure time: <input type="date" name="star" value="<?php echo $row["star"]; ?>"> <br/>
+  Arrival time: <input type="date" name="end" value="<?php echo $row["end"]; ?>"> <br/>
   Stop along the way: <input type="text" name="sover" value="<?php echo $row["sover"]; ?>"> <br/>
     
     <input type="submit" name="submit">
