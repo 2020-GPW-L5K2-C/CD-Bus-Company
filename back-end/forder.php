@@ -253,7 +253,7 @@ if (!$result) {
                       <th>Bus destination</th>  
                       <th>Departure date</th>
                       <th>Customer identity card</th>
-                      
+                      <th>Update</th>
                       <th>Delete</th>
                     </tr>
                   </thead>
