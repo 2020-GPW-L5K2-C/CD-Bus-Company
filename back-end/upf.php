@@ -70,16 +70,16 @@ $row = mysqli_fetch_array($result);
 ?>
 
 <form action="upf.php" method="post">
-    <input type="text" name="id" value="<?php echo $row["id"]; ?>">
-    Name: <input type="text" name="name" value="<?php echo $row["name"]; ?>"> <br/>
+    <input type="int" name="id" value="<?php echo $row["id"]; ?>">
+    Name: <input type="varchar" name="name" value="<?php echo $row["name"]; ?>"> <br/>
     Gender: <input type="text" name="idno" value="<?php echo $row["idno"]; ?>"> <br/>
    Phone : <input type="text" name="phone" value="<?php echo $row["phone"]; ?>"> <br/>
    Date : <input type="date" name="date" value="<?php echo $row["date"]; ?>"> <br/>
-    Start: <input type="text" name="start" value="<?php echo $row["start"]; ?>"> <br/>
-    Destination: <input type="text" name="destination" value="<?php echo $row["destination"]; ?>"> <br/>
-    meal: <input type="text" name="meal" value="<?php echo $row["meal"]; ?>"> <br/>
-    type: <input type="text" name="ttype" value="<?php echo $row["ttype"]; ?>"> <br/>
-   Payment : <input type="text" name="pay" value="<?php echo $row["pay"]; ?>"> <br/>
+    Start: <input type="varchar" name="start" value="<?php echo $row["start"]; ?>"> <br/>
+    Destination: <input type="varchar" name="destination" value="<?php echo $row["destination"]; ?>"> <br/>
+    meal: <input type="varchar" name="meal" value="<?php echo $row["meal"]; ?>"> <br/>
+    type: <input type="varchar" name="ttype" value="<?php echo $row["ttype"]; ?>"> <br/>
+   Payment : <input type="varchar" name="pay" value="<?php echo $row["pay"]; ?>"> <br/>
     
     <input type="submit" name="submit">
 </form>
