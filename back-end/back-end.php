@@ -234,19 +234,8 @@ if (!$result) {
 ?>
 
 <html>
-    <head>
-       
-        <link type="text/css" rel="stylesheet" >
-        <style>
-            .hello tr:hover {
-        background-color:gainsboro;
-            }
-        
-        </style>
-    </head>
-    
-    <body>
-<table width="80%" border="double" cellpadding="2" cellspacing="1" align="center" class="hello">
+    <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>The backend ID</th>

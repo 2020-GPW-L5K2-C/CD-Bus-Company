@@ -238,7 +238,9 @@ if (!$result) {
 
     <body>
 
- <table width="80%" border="double" cellpadding="10" cellspacing="10" align="center" border = "10">
+<div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
      <tr>
          <td><h4>ID</h4></td>
          <td><h4>Name</h4></td>
@@ -247,7 +249,7 @@ if (!$result) {
          <td><h4>Delete</h4></td>
          
      </tr>
-     
+     </thead>
 <?php
 
 // 3. use/show data
@@ -268,9 +270,7 @@ while ($row = mysqli_fetch_array($result)) {
 ?>
   </table>
 
-    <a href="adds.php">
-        <input name = "Add" type="button" value="Add" style="margin-left:140px;margin-top:20px"; >
-        </a>
+   <a href="ab.php">Add a new!</a>  
 
         
    
@@ -289,27 +289,21 @@ mysqli_close($connection);
                       
                       
                       
-    </body>
-                      </html>
-                    </thead>
-                  </table>
-          </div>
- </div>
-    </div>
-        </div>
+
+   
         <!-- /.container-fluid -->
 
-      </div>
+      
       <!-- End of Main Content -->
 
       <!-- Footer -->
     
       <!-- End of Footer -->
 
-    </div>
+  
     <!-- End of Content Wrapper -->
 
-  </div>
+ 
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->

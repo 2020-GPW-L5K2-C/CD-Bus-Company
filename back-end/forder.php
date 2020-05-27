@@ -237,19 +237,10 @@ if (!$result) {
 ?>
 
 <html>
-    <head>
-       
-        <link type="text/css" rel="stylesheet" >
-        <style>
-            .hello tr:hover {
-        background-color:gainsboro;
-            }
-        
-        </style>
-    </head>
-    
-    <body>
-<table width="80%" border="double" cellpadding="2" cellspacing="1" align="center" class="hello">
+     
+          
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>The backend ID</th>
@@ -288,8 +279,8 @@ while ($row = mysqli_fetch_array($result)) {
             
 ?>            
                     
-       
-                </table>       
+  </table>        
+     
               
 
 <?php
@@ -301,27 +292,26 @@ mysqli_free_result($result);
 mysqli_close($connection);
 
 ?>  
-                      
-    </body>
-                      </html>
-                    </thead>
-                  </table>
-          </div>
- </div>
-    </div>
-        </div>
+
+                    
+                   
+                 
+        
+ 
+    
+      
         <!-- /.container-fluid -->
 
-      </div>
+  
       <!-- End of Main Content -->
 
       <!-- Footer -->
       <!-- End of Footer -->
 
-    </div>
+    
     <!-- End of Content Wrapper -->
 
-  </div>
+
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
