@@ -53,7 +53,7 @@ if ($_POST['submit']) {
 $updateid = $_GET['id'];
 
 // 2. Do a query
-$query  = "SELECT id, name, idno, phone, date, start, destination, meal, ttype, pay"; 
+$query  = "SELECT id, name, idno, phone, date, start, destination, meal, ttype, pay "; 
 $query .= "FROM forder ";
 $query .= "WHERE id = $updateid";
 
