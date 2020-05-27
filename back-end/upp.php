@@ -44,7 +44,7 @@ if ($_POST['submit']) {
 $updateid = $_GET['id'];
 
 // 2. Do a query
-$query  = "SELECT id, li, s_id, r_id, date "; 
+$query  = "SELECT id, li, s_id, r_id, price "; 
 $query .= "FROM price ";
 $query .= "WHERE id = $updateid";
 
