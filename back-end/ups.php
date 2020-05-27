@@ -25,8 +25,8 @@ if ($_POST['submit']) {
     $query  = "UPDATE component SET "; 
     $query .= "id = '$id', "; 
     $query .= "name = '$name', "; 
-    $query .= "gender = '$gender' "; 
-    $query .= "p = '$p' "; 
+    $query .= "gender = '$gender', "; 
+    $query .= "p = '$p', "; 
     $query .= "WHERE id = $id";
 
     $result = mysqli_query($connection, $query);
