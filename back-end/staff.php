@@ -259,9 +259,8 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["name"] . "</td>";
     echo "<td>" . $row["gender"] . "</td>";
     echo "<td>" . $row["p"] . "</td>";
-    
-    echo "<td><a href='des.php?id=" . 
-        $row["id"] . "'>Delete</a></td>";    
+    echo "<td><a href='ups.php?id="  .$row["id"] . "'>Update Information</a></td>"; 
+    echo "<td><a href='des.php?id=" .$row["id"] . "'>Delete</a></td>";    
     
     echo "</tr>";
     
