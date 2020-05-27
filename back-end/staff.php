@@ -101,7 +101,7 @@ $dbname="l5k2c";
             <a class="collapse-item" href="meal.php">Meal</a>
             <a class="collapse-item" href="price.php">Price</a>  
             <a class="collapse-item" href="bus.php">Bus</a>
-            
+            <a class="collapse-item" href="route.php">Route</a>  
           </div>
         </div>
       </li>
@@ -338,7 +338,7 @@ $dbname="l5k2c";
                  <?php    
 
 // 2. Do a query
-$query  = "SELECT id, name, gender, idno "; 
+$query  = "SELECT id, name, gender, p "; 
 $query .= "FROM staff ";
 
 //echo $query;
@@ -363,9 +363,9 @@ if (!$result) {
          <td><h4>ID</h4></td>
          <td><h4>Name</h4></td>
          <td><h4>Gender</h4></td>
-         <td><h4>ID card NO.</h4></td>
+         <td><h4>Position</h4></td>
          <td><h4>Delete</h4></td>
-         <td><h4>Update</h4></td>
+         
      </tr>
      
 <?php
@@ -376,13 +376,11 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["id"] . "</td>";
     echo "<td>" . $row["name"] . "</td>";
     echo "<td>" . $row["gender"] . "</td>";
-    echo "<td>" . $row["idno"] . "</td>";
+    echo "<td>" . $row["p"] . "</td>";
     
-    echo "<td><a href='decus.php?id=" . 
+    echo "<td><a href='des.php?id=" . 
         $row["id"] . "'>Delete</a></td>";    
-    echo "<td><a href='upcus.php?id=" . 
-        $row["id"] . "'>Update</a></td>";
-
+    
     echo "</tr>";
     
     }
@@ -390,7 +388,7 @@ while ($row = mysqli_fetch_array($result)) {
 ?>
   </table>
 
-    <a href="addcus.php">
+    <a href="adds.php">
         <input name = "Add" type="button" value="Add" style="margin-left:140px;margin-top:20px"; >
         </a>
 

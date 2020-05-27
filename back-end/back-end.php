@@ -101,7 +101,7 @@ $dbname="l5k2c";
             <a class="collapse-item" href="meal.php">Meal</a>
             <a class="collapse-item" href="price.php">Price</a>  
             <a class="collapse-item" href="bus.php">Bus</a>
-            
+            <a class="collapse-item" href="route.php">Route</a>  
           </div>
         </div>
       </li>
@@ -366,7 +366,7 @@ if (!$result) {
                     <tr>
                       <th>The backend ID</th>
                       <th>Customer ID</th>
-                      <th>Employee ID</th>
+                      <th>Staff ID</th>
                       <th>Bus ID</th>
                       <th>Ticket ID</th>
                       <th>Meal ID</th>
@@ -393,7 +393,8 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["star"] . "</td>";
     echo "<td>" . $row["end"] . "</td>";
     echo "<td>" . $row["date"] . "</td>";
-     echo "<td>" . $row["payment"] . "</td>";
+    echo "<td>" . $row["cusidno"] . "</td>";
+    echo "<td>" . $row["pay"] . "</td>";
     echo "<td><a href='upb.php?id="  .$row["id"] . "'>Update Information</a></td>";  
     echo "<td><a href='deb.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
     echo "</tr>";

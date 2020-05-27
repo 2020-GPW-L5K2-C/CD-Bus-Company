@@ -101,7 +101,7 @@ $dbname="l5k2c";
             <a class="collapse-item" href="meal.php">Meal</a>
             <a class="collapse-item" href="price.php">Price</a>  
             <a class="collapse-item" href="bus.php">Bus</a>
-            
+            <a class="collapse-item" href="route.php">Route</a>  
           </div>
         </div>
       </li>
@@ -322,12 +322,12 @@ $dbname="l5k2c";
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Back-end</h1>
+          <h1 class="h3 mb-2 text-gray-800">Price</h1>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Back-end Tables</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Price Tables</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -366,10 +366,10 @@ if (!$result) {
                     <tr>
                       <th>Price ID</th>
                       <th>Licence</th>
-                      <th>Employee ID</th>
                       <th>Staff ID</th>
-                      <th>ROUTE ID</th>
-                      <th>Update</th>
+
+                      <th>Route ID</th>
+            
                       <th>Delete</th>
                     </tr>
                   </thead>
@@ -383,8 +383,6 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row["s_id"] . "</td>";
     echo "<td>" . $row["r_id"] . "</td>";
     
-     
-    echo "<td><a href='upp.php?id="  .$row["id"] . "'>Update Information</a></td>";  
     echo "<td><a href='dep.php?id="  .$row["id"]  ."'>Delete Information</a></td>";
     echo "</tr>";
 }        
