@@ -23,9 +23,9 @@ if ($_POST['submit']) {
     
     // 2. Do a query
     $query  = "UPDATE staff SET "; 
-    $query .= "id = '$id' "; 
-    $query .= "name = '$name' "; 
-    $query .= "gender = '$gender' "; 
+    $query .= "id = '$id', "; 
+    $query .= "name = '$name', "; 
+    $query .= "gender = '$gender', "; 
     $query .= "p = '$p' "; 
     $query .= "WHERE id = $id";
 
