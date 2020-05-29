@@ -129,7 +129,27 @@ if ($_POST['submit']) {
             <option value="chengdu">Chengdu</option>
 
             <option value="kangding">Kangding</option>
+        
+            <option value="guangan">Guangan</option>
 
+            <option value="yaan">Yaan</option>
+         
+            <option value="neijiang">Neijiang</option>
+
+            <option value="deyang">Deyang</option>
+          
+            <option value="zigong">Zigong</option>
+
+            <option value="luzhou">Luzhou</option>
+
+            <option value="meishan">Meishan</option>
+
+            <option value="nanchong">Nanchong</option>
+          
+            <option value="yibin">Yibin</option>
+
+            <option value="dujiangyan">Dujiangyan</option>
+        
          </select></div>
     
     <div class="form-group">
@@ -140,6 +160,26 @@ if ($_POST['submit']) {
 
             <option value="kangding">Kangding</option>
 
+            <option value="guangan">Guangan</option>
+
+            <option value="yaan">Yaan</option>
+         
+            <option value="neijiang">Neijiang</option>
+
+            <option value="deyang">Deyang</option>
+          
+            <option value="zigong">Zigong</option>
+
+            <option value="luzhou">Luzhou</option>
+
+            <option value="meishan">Meishan</option>
+
+            <option value="nanchong">Nanchong</option>
+          
+            <option value="yibin">Yibin</option>
+
+            <option value="dujiangyan">Dujiangyan</option>
+        
          </select></div>
     
     <div class="form-group">
