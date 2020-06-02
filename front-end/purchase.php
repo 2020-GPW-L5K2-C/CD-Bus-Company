@@ -187,11 +187,13 @@ if ($_POST['submit']) {
 
             <option value="null">--Select Meal--</option>   
         
-            <option value="bread">Bread</option>
+            <option value="Package1">Package 1</option>
 
-            <option value="chinese set meal">Chinese set meal</option>
+            <option value="Package2">Package 2</option>
 
-            <option value="Western set meal">Western set meal</option>
+            <option value="Package3">Package 3</option>
+        
+            <option value="Package4">Package 4</option>
 
          </select></div>
     
