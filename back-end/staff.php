@@ -246,6 +246,7 @@ if (!$result) {
          <td><h4>Name</h4></td>
          <td><h4>Gender</h4></td>
          <td><h4>Position</h4></td>
+         <td><h4>Update</h4></td>
          <td><h4>Delete</h4></td>
          
      </tr>
